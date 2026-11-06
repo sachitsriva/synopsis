@@ -1,0 +1,90 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synopsis — Your personal TV diary</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navigation">
+        <a href="#" class="logo" id="home-link">synopsis<span>.</span></a>
+
+        <form id="search-form" class="search-form">
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Search TV shows..."
+            aria-label="Search TV shows"
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <a href="#" id="library-link" class="nav-link">
+          My Library
+        </a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="home-view">
+        <div class="hero">
+          <p class="eyebrow">YOUR PERSONAL TV DIARY</p>
+          <h1>Good shows. Kept close.</h1>
+          <p class="subtitle">
+            A little space for the series that stay with you.
+            Build your own TV collection.
+          </p>
+          <button id="find-show-button">
+            Find a show →
+          </button>
+        </div>
+
+        <div class="section-heading">
+          <h2>My Library <span id="library-count">0</span></h2>
+          <p>Your collection. Your kind of television.</p>
+        </div>
+
+        <div id="library-grid" class="show-grid"></div>
+
+        <div id="empty-library" class="empty-state" hidden>
+          <h2>Your next great show belongs here.</h2>
+          <p>
+            Search for a series and add it to your library.
+            A good collection starts with one.
+          </p>
+          <button id="empty-find-button">
+            Find your first show →
+          </button>
+        </div>
+      </section>
+
+      <section id="search-view" hidden>
+        <div class="hero">
+          <p class="eyebrow">SEARCH. SAVE. KEEP CLOSE.</p>
+          <h1 id="results-heading">Search results</h1>
+          <p class="subtitle">
+            Find a familiar favorite or a new story worth saving.
+          </p>
+        </div>
+
+        <div class="section-heading">
+          <h2>TV shows <span id="results-count">0</span></h2>
+          <p id="results-summary"></p>
+        </div>
+
+        <p id="search-message" role="status"></p>
+        <div id="results-grid" class="show-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>synopsis</span>
+      <span>For the love of a good series.</span>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
